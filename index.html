@@ -8,6 +8,26 @@
         <!-- reset-css -->
         <link rel="stylesheet" href="./Assets/css/reset.css" />
 
+        <!-- favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="./Assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./Assets/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./Assets/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./Assets/favicon/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./Assets/favicon/site.webmanifest" />
+
         <!-- grid-12-columns -->
         <link rel="stylesheet" href="./Assets/css/grid.css" />
 
@@ -19,7 +39,7 @@
     </head>
     <body>
         <!-- ruler -->
-        <div
+        <!-- <div
             style="background: oldlace; position: fixed; width: 100%; top: 0px"
         >
             <div class="container">
@@ -62,12 +82,46 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- header -->
         <header class="header">
             <div class="container">
-                <div class="inner">header</div>
+                <div class="header__inner">
+                    <!-- logo -->
+                    <a href="#!" class="header__logo">
+                        <img src="./Assets/icons/Logo.svg" alt="CeloBank" />
+                    </a>
+
+                    <!-- nav-bar -->
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a
+                                    href="#!"
+                                    class="navbar__link nav__link--active"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Products</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Features</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- cta-buttons -->
+                    <div class="header__cta">
+                        <a href="#!" class="secondary-btn">Log in</a>
+                        <a href="#!" class="primary-btn">Sign up</a>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -78,10 +132,93 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <div class="inner">left-hero</div>
+                            <section class="hero__info">
+                                <span class="hero__pre-heading">
+                                    Digital Smart Wallet
+                                </span>
+
+                                <h1 class="hero__heading">
+                                    Digital
+                                    <strong class="hero__heading--strong"
+                                        >Payment</strong
+                                    >
+                                    For Everyone.
+                                </h1>
+
+                                <p class="hero__desc">
+                                    We bring together eveything that’s required
+                                    to build websites and apps that accept
+                                    payments and send payouts globally. We are
+                                    the best platform.
+                                </p>
+
+                                <form
+                                    action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                                    target="_blank"
+                                    autocomplete="on"
+                                    method="post"
+                                    class="hero__form"
+                                >
+                                    <input
+                                        name="email"
+                                        type="email"
+                                        placeholder="Your email address"
+                                        class="hero__form-input"
+                                    />
+                                    <button
+                                        type="submit"
+                                        class="primary-btn hero__cta"
+                                    >
+                                        Get Started
+                                    </button>
+                                </form>
+
+                                <span class="hero__note">
+                                    *We’ll respect the inbox and never share
+                                    your email.
+                                </span>
+                            </section>
                         </div>
                         <div class="col-lg-5 offset-lg-1 col-md-6 col-12">
-                            <div class="inner">right-hero</div>
+                            <figure class="hero__media">
+                                <img
+                                    src="./Assets/icons/Mobile Screen.svg"
+                                    alt="Digital Smart Wallet"
+                                />
+
+                                <div class="hero-feature-1">
+                                    <img
+                                        src="./Assets/icons/deposite.svg"
+                                        alt="deposite to $32000"
+                                    />
+                                    <span class="hero-feature-1__heading">
+                                        Deposite
+                                    </span>
+                                    <strong class="hero-feature-1__desc">
+                                        $32000
+                                    </strong>
+                                </div>
+
+                                <div class="hero-feature-2">
+                                    <img
+                                        src="./Assets/icons/security-fund.svg"
+                                        alt="SECURED FUNDS to $1.310"
+                                    />
+                                    <div class="hero-feature-2__wrapper">
+                                        <strong class="hero-feature-2__heading">
+                                            $1.310
+                                        </strong>
+                                        <span class="hero-feature-2__desc">
+                                            SECURED FUNDS
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="hero-feature-3">
+                                    <strong class="hero-feature-3__heading">0%</strong>
+                                    <span class="hero-feature-3__desc">Interest</span>
+                                </div>
+                            </figure>
                         </div>
                     </div>
                 </div>
