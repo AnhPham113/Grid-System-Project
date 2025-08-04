@@ -167,6 +167,19 @@
 .offset-11 {
     --offset-num: 11;
 }
+
+.row > [class*="mt-"] {
+    margin-top: calc(var(--spacer) * var(--margin-number));
+}
+
+.mt-0 {
+    --margin-number: 0;
+}
+
+.mt-1 {
+    --margin-number: 1;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .container {
@@ -295,6 +308,14 @@
 
     .offset-sm-11 {
         --offset-num: 11;
+    }
+
+    .mt-sm-0 {
+        --margin-number: 0;
+    }
+
+    .mt-sm-1 {
+        --margin-number: 1;
     }
 }
 
@@ -428,6 +449,14 @@
     .offset-md-11 {
         --offset-num: 11;
     }
+
+    .mt-md-0 {
+        --margin-number: 0;
+    }
+
+    .mt-md-1 {
+        --margin-number: 1;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -558,6 +587,14 @@
 
     .offset-lg-11 {
         --offset-num: 11;
+    }
+
+    .mt-lg-0 {
+        --margin-number: 0;
+    }
+
+    .mt-lg-1 {
+        --margin-number: 1;
     }
 }
 
@@ -690,5 +727,13 @@
 
     .offset-xl-11 {
         --offset-num: 11;
+    }
+
+    .mt-xl-0 {
+        --margin-number: 0;
+    }
+
+    .mt-xl-1 {
+        --margin-number: 1;
     }
 }
