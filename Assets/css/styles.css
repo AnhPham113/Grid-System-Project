@@ -372,7 +372,7 @@ input {
 }
 
 .works__media {
-    background: url(./Assets/icons/work-hero-bg.svg) center bottom no-repeat;
+    background: url(../icons/work-hero-bg.svg) center bottom no-repeat;
     position: relative;
     display: flex;
 }
@@ -645,7 +645,7 @@ input {
 }
 
 .feature__row-2 .feature__media {
-    background: url(./Assets/icons/feature-bg-2.svg) center bottom no-repeat;
+    background: url(../icons/feature-bg-2.svg) center bottom no-repeat;
     display: flex;
     position: relative;
 }
