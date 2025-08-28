@@ -36,10 +36,12 @@
 
         <!-- styles -->
         <link rel="stylesheet" href="./Assets/css/styles.css" />
+
+        <!-- responsive -->
+        <link rel="stylesheet" href="./Assets/responsive/responsive.css" />
     </head>
     <body>
-
-        <!-- header -->
+        <!-- desktop-header -->
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -85,9 +87,69 @@
                         <a href="#!" class="secondary-btn">Log in</a>
                         <a href="#!" class="primary-btn header__btn">Sign up</a>
                     </div>
+
+                    <!-- tablet+mobile-menu-icon -->
+                    <label for="menu-checkbox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            class="header__menu-icon"
+                        >
+                            <path
+                                fill="currentcolor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
                 </div>
             </div>
         </header>
+
+        <!-- checkbox -->
+        <input type="checkbox" id="menu-checkbox" hidden />
+
+        <!-- tablet+mobile-sidebar -->
+        <div class="sidebar">
+            <!-- close-icon-sidebar -->
+            <label for="menu-checkbox" class="sidebar__close-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        fill="currentcolor"
+                        d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                    />
+                </svg>
+            </label>
+
+            <!-- nav-bar -->
+            <nav class="mobile-navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link"> Home </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#Products" class="navbar__link"> Products </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#Features" class="navbar__link"> Features </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#Feedback" class="navbar__link"> Feedback </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#Blog" class="navbar__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- cta-buttons -->
+            <div class="sidebar__cta">
+                <a href="#!" class="secondary-btn">Log in</a>
+                <a href="#!" class="primary-btn header__btn">Sign up</a>
+            </div>
+        </div>
+
+        <!-- sidebar-overlay -->
+        <label for="menu-checkbox" class="sidebar-overlay"></label>
 
         <!-- main -->
         <main>
@@ -95,7 +157,7 @@
             <section class="hero" id="hero">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-12">
                             <section class="hero__info">
                                 <span class="section-pre-heading">
                                     Digital Smart Wallet
@@ -143,11 +205,12 @@
                                 </span>
                             </section>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 col-md-6 col-12">
+                        <div class="col-lg-5 offset-lg-1 col-12">
                             <figure class="hero__media">
                                 <img
                                     src="./Assets/icons/Mobile Screen.svg"
                                     alt="Digital Smart Wallet"
+                                    class="hero__thumb"
                                 />
 
                                 <div class="hero-feature-1">
@@ -195,12 +258,13 @@
             <!-- works -->
             <section class="works" id="Products">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-6 col-12">
+                    <div class="row column-rerverse">
+                        <div class="col-lg-5 col-12">
                             <figure class="works__media">
                                 <img
                                     src="./Assets/images/works-hero-img-2.png"
                                     alt="work-hero-image"
+                                    class="works__thumb"
                                 />
 
                                 <div class="works__feature-1">
@@ -231,8 +295,8 @@
                                 </div>
                             </figure>
                         </div>
-                        <div class="col-lg-5 offset-lg-2 col-md-6 col-12">
-                            <section class="section-vertical-center">
+                        <div class="col-lg-5 offset-lg-2 col-12">
+                            <section class="work__info">
                                 <span class="section-pre-heading">
                                     Digital Smart Wallet
                                 </span>
@@ -284,7 +348,7 @@
                 <div class="container">
                     <!-- row-1 -->
                     <div class="row">
-                        <div class="col-lg-5 col-md-6 col-12">
+                        <div class="col-lg-5 col-12">
                             <section class="feature__info">
                                 <span class="section-pre-heading">
                                     Digital Smart Wallet
@@ -320,7 +384,7 @@
                                 <a href="#!" class="primary-btn">Get Started</a>
                             </section>
                         </div>
-                        <div class="col-lg-6 offset-lg-1 col-md-6 col-12">
+                        <div class="col-lg-6 offset-lg-1 col-12">
                             <figure class="feature__media">
                                 <img
                                     src="./Assets/icons/feature-card.svg"
@@ -376,8 +440,8 @@
                     </div>
 
                     <!-- row-2 -->
-                    <div class="row feature__row-2">
-                        <div class="col-lg-5 col-md-6 col-12">
+                    <div class="row feature__row-2 column-rerverse">
+                        <div class="col-lg-5 col-12">
                             <figure class="feature__media">
                                 <img
                                     src="./Assets/images/feature-hero.png"
@@ -438,7 +502,7 @@
                                 </div>
                             </figure>
                         </div>
-                        <div class="col-lg-5 offset-lg-2 col-md-6 col-12">
+                        <div class="col-lg-5 offset-lg-2 col-12">
                             <section class="feature__info">
                                 <span class="section-pre-heading">
                                     Digital Smart Wallet
@@ -573,7 +637,9 @@
                             </p>
                         </section>
 
-                        <a href="#!" class="primary-btn">Read All</a>
+                        <a href="#!" class="primary-btn hidden-on-mobile">
+                            Read All
+                        </a>
                     </section>
                     <div class="row row-cols-md-2 row-cols-1">
                         <div class="col">
@@ -697,6 +763,11 @@
                             </article>
                         </div>
                     </div>
+                    <div class="btn-wrapper">
+                        <a href="#!" class="primary-btn hidden-on-desktop">
+                            Read All
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -728,12 +799,14 @@
                                 <img
                                     src="./Assets/icons/googleplay-app.svg"
                                     alt="app-link"
+                                    class="cta__link-image"
                                 />
                             </a>
                             <a href="#!">
                                 <img
                                     src="./Assets/icons/appstore-app.svg"
                                     alt="app-link"
+                                    class="cta__link-image"
                                 />
                             </a>
                         </div>
