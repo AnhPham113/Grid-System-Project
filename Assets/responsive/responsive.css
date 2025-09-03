@@ -1,5 +1,10 @@
 /* =====Desktop===== */
 @media screen and (min-width: 992px) {
+    :root {
+        --section-spacing: 160px;
+        --inner-section-spacing: 70px;
+    }
+
     .hidden-on-desktop {
         display: none;
     }
@@ -12,6 +17,7 @@
 /* =====Tablet+Mobile===== */
 @media screen and (max-width: 991.98px) {
     /* common */
+
     .column-rerverse {
         flex-direction: column-reverse;
     }
@@ -112,11 +118,46 @@
 
     .navbar__link {
         font-size: 2rem;
+        width: 100%;
+    }
+
+    .nav__link--active::after,
+    .navbar__link:hover::after {
+        display: none;
+    }
+
+    .navbar__name {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column-reverse;
+    }
+
+    .navbar__link:hover .navbar__name::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0px;
+        right: 0px;
+        top: 32px;
+        border-radius: 0.5px;
+        background: #7264d6;
+        height: 1px;
     }
 
     .sidebar__cta {
-        flex-direction: column-reverse;
+        flex-direction: column;
         row-gap: 0px;
+    }
+
+    .sidebar__cta::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 150px;
+        height: 1px;
+        background: #edecee;
     }
 
     .sidebar__close-icon {
@@ -138,9 +179,6 @@
     .section-desc,
     .hero__form {
         width: 100%;
-    }
-
-    .hero__heading {
     }
 
     .section-desc {
@@ -228,6 +266,11 @@
         translate: -50%;
     }
 
+    .feature__hero-image {
+        width: 100%;
+        translate: 0%;
+    }
+
     .feature__media-1 {
         top: 90px;
     }
@@ -245,6 +288,16 @@
     .feature__media-4 {
         right: 490px;
         bottom: 210px;
+    }
+
+    /* testimonial */
+    .testimonial__content {
+        font-size: 1.6rem;
+    }
+
+    .testimonial__wrapper {
+        padding: 12px;
+        min-height: 200px;
     }
 
     /* Blog */
@@ -273,10 +326,37 @@
 
 /* =====Tablet===== */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+    :root {
+        --section-spacing: 120px;
+        --inner-section-spacing: 70px;
+    }
+    .footer__form-input::placeholder {
+        font-size: 1.2rem;
+    }
 }
 
 /* =====Mobile===== */
 @media screen and (max-width: 767.98px) {
+    /* common */
+    :root {
+        --section-spacing: 100px;
+        --inner-section-spacing: 50px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        font-size: 1.4rem;
+    }
+
+    .section-pre-heading {
+        font-size: 1.4rem;
+    }
+
     .feature__hero-media {
         width: 80%;
     }
@@ -298,13 +378,13 @@
     }
 
     .sidebar {
-        padding: 40px 12px 12px;
+        padding: 70px 12px 12px;
         inset: 0 28% 0 0;
         translate: 139%;
     }
 
     .navbar__link {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .sidebar__close-icon {
@@ -314,5 +394,186 @@
 
     input[type="checkbox"]:checked ~ .sidebar {
         translate: 39% 0;
+    }
+
+    /* hero-section */
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .hero__heading,
+    .hero__heading--strong {
+        font-size: 4rem;
+    }
+
+    .section-desc {
+        font-size: 1.4rem;
+    }
+
+    .hero__form {
+        max-width: 360px;
+    }
+
+    .hero__form-input::placeholder {
+        font-size: 1.4rem;
+    }
+
+    .hero-feature-1 {
+        top: 517px;
+        left: 10px;
+    }
+
+    .hero-feature-3 {
+        right: 0px;
+        transform: scale(0.9);
+    }
+
+    /* works */
+
+    .works__content-heading,
+    .works__content-item::marker {
+        font-size: 1.8rem;
+    }
+
+    .works__content-list {
+        padding: 0 16px;
+    }
+
+    .works__content-desc {
+        font-size: 1.4rem;
+    }
+
+    .works__feature-1 {
+        top: 0px;
+        right: 12px;
+        transform: scale(0.7);
+    }
+
+    .works__feature-2 {
+        right: 90px;
+        bottom: 46px;
+        transform: scale(0.8);
+    }
+
+    /* feature */
+
+    .feature__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature__list-item {
+        column-gap: 8px;
+        min-width: 30%;
+    }
+
+    .feature__list-content {
+        font-size: 1.3rem;
+    }
+
+    .feature__media-1 {
+        top: 48px;
+        right: -40px;
+        transform: scale(0.65);
+    }
+
+    .feature__media-2 {
+        right: -10px;
+        bottom: -30px;
+        transform: scale(0.7);
+    }
+
+    .feature__media-3 {
+        bottom: -65px;
+        right: -35px;
+        transform: scale(0.6);
+    }
+
+    .feature__media-4 {
+        right: 250px;
+        bottom: 80px;
+        transform: scale(0.8);
+    }
+
+    /* testimonial  */
+
+    .testimonial__wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .testimonial__wrapper:hover {
+        filter: drop-shadow(0 0 0.75px #dfe2e8) drop-shadow(0 0 0.75px #dfe2e8);
+        cursor: default;
+    }
+
+    .testimonial__caption {
+        margin-top: 64px;
+    }
+
+    .testimonial__name {
+        font-size: 1.8rem;
+    }
+
+    .testimonial__position {
+        font-size: 1.4rem;
+    }
+
+    .testimonial__inner {
+        margin-top: 40px;
+    }
+
+    .testimonial__inner--first {
+        margin-top: 0px;
+    }
+
+    .testimonial__avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* blog */
+
+    .blog__article {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .blog__image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .article-info__heading {
+        font-size: 1.6rem;
+    }
+
+    .blog__article:hover {
+        box-shadow: none;
+        border-color: #dfe2e8;
+        cursor: default;
+    }
+
+    /* cta */
+
+    .cta__inner {
+        padding: 48px 0px;
+    }
+
+    /* footer */
+
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer__middle-row {
+        justify-content: space-between;
+        column-gap: 0px;
+    }
+
+    .footer__top-row,
+    .footer__middle-row {
+        padding: 0px 12px;
     }
 }
